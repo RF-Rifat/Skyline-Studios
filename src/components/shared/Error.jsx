@@ -15,13 +15,13 @@ const Error = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center">
             <a
-              href=""
+              href="/"
               className="w-full px-8 py-4 mb-4 mr-0 text-base font-medium text-gray-100 uppercase bg-blue-600 rounded-full lg:w-auto hover:bg-blue-800 lg:mb-0 lg:mr-4 md:w-full "
             >
               Return Home
             </a>
             <a
-              href=""
+              href="/"
               className="w-full px-8 py-4 text-base font-medium text-gray-100 uppercase border border-blue-200 rounded-full dark:border-gray-500 dark:hover:border-blue-800 dark:text-gray-400 lg:w-auto hover:text-gray-200 dark:hover:text-gray-200 hover:border-blue-800 md:w-full hover:bg-blue-800"
             >
               Report Problem
