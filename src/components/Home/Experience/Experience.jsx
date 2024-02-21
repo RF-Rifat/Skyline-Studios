@@ -1,21 +1,32 @@
 import { useState, useRef } from "react";
+import {
+  motion,
+  useAnimation,
+  useViewportScroll,
+} from "framer-motion";
+import "./Spin.css";
+import { useFollowPointer } from "./useFollowPointer";
 
 const Experience = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const videoRef = useRef(null);
+  const ref = useRef(null);
+  const controls = useAnimation();
+  const { scrollY } = useViewportScroll();
+  const { x, y } = useFollowPointer(ref);
 
-  const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
+  //   const handleMouseMove = (e) => {
+  //     setMousePosition({ x: e.clientX, y: e.clientY });
+  //   };
 
-  const handleMouseEnter = () => {
-    setIsHovering(true);
-  };
+  //   const handleMouseEnter = () => {
+  //     setIsHovering(true);
+  //   };
 
-  const handleMouseLeave = () => {
-    setIsHovering(false);
-  };
+  //   const handleMouseLeave = () => {
+  //     setIsHovering(false);
+  //   };
 
   const handleVideoClick = () => {
     const video = videoRef.current;
@@ -25,17 +36,21 @@ const Experience = () => {
       video.pause();
     }
   };
-  console.log(videoRef.current.paused);
+
+  scrollY.onChange((latest) => {
+    const scale = Math.max(0.2, 1 - latest / 1000);
+    controls.start({ scale: scale });
+  });
 
   return (
     <div className="bg-white">
       <div className="showreel-sticky">
         <div className="about-title-content text-center">
-          <section
+          <motion.section
             className="video-area"
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseMove={handleMouseMove}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
             data-w-id="d9e2158d-dfd8-5a4e-bf9b-c7818e8daff5"
             style={{
               willChange: "transform, width, height",
@@ -45,9 +60,12 @@ const Experience = () => {
               height: "100%",
             }}
           >
-            <div className="video-embed w-embed">
+            <motion.div
+              ref={videoRef}
+              animate={controls}
+              className="video-embed w-embed"
+            >
               <video
-                ref={videoRef}
                 className="wb-video-styles-controller"
                 poster="https://uiart.io/video/MM-reel.gif"
                 loop
@@ -58,33 +76,42 @@ const Experience = () => {
                   type="video/mp4"
                 />
               </video>
-            </div>
+            </motion.div>
 
-            {isHovering && (
+            <motion.div
+              ref={ref}
+              className="box"
+              animate={{ x, y }}
+              transition={{
+                type: "spring",
+                damping: 3,
+                stiffness: 50,
+                restDelta: 0.001,
+              }}
+              style={{
+                position: "absolute",
+                top: mousePosition.y,
+                left: mousePosition.x,
+              }}
+            >
               <div
-                className="custom-image"
-                style={{
-                  position: "absolute",
-                  top: mousePosition.y,
-                  left: mousePosition.x,
-                }}
+                className="relative h-32 w-32 spin"
+                onClick={handleVideoClick}
               >
-                <div className="relative h-32 w-32" onClick={handleVideoClick}>
-                  <img
-                    src="https://assets-global.website-files.com/643f7373d3f6653157617339/6448e195835c273a8d71af34_Video%20Player%20Icon.svg"
-                    alt="play now"
-                    className="absolute inset-0 m-auto h-12 w-12"
-                  />
-                  <img
-                    loading="lazy"
-                    alt="play now"
-                    src="https://assets-global.website-files.com/643f7373d3f6653157617339/648050ec6410b577150dc4cf_video%20text%20circle.svg"
-                    className=""
-                  />
-                </div>
+                <img
+                  src="https://assets-global.website-files.com/643f7373d3f6653157617339/6448e195835c273a8d71af34_Video%20Player%20Icon.svg"
+                  alt="play now"
+                  className="absolute inset-0 m-auto h-12 w-12"
+                />
+                <img
+                  loading="lazy"
+                  alt="play now"
+                  src="https://assets-global.website-files.com/643f7373d3f6653157617339/648050ec6410b577150dc4cf_video%20text%20circle.svg"
+                  className=""
+                />
               </div>
-            )}
-          </section>
+            </motion.div>
+          </motion.section>
         </div>
       </div>
     </div>
