@@ -1,7 +1,13 @@
+import HeroSection from "../components/Hero/HeroSection";
+import Navbar from "../components/shared/Navbar";
+
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Navbar />
+      <HeroSection />
+    </>
+  );
+};
 
-export default Home
+export default Home;

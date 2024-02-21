@@ -1,18 +1,18 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-const Button = ({ text, color }) => {
+const Button = ({ text, color, fontClr }) => {
   return (
     <>
       <Link
         href="/"
-        className="relative inline-flex items-center justify-start py-3 pl-4 pr-14 overflow-hidden font-semibold transition-all duration-500 ease-in-out rounded hover:pl-14 hover:pr-6 group"
+        className="relative inline-flex items-center justify-start py-3 pl-4 pr-14 overflow-hidden font-semibold transition-all duration-300 ease-in-out rounded hover:pl-14 hover:pr-6 group"
       >
-        <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:">
+        <span className="absolute right-0 pr-5 duration-200 ease-out">
           <div
-            className={`${color} p-2 rounded-full group-hover:scale-0 duration-200 ease-out`}
+            className={`${color} ${fontClr} p-2 rounded-full group-hover:scale-0 duration-200 ease-out`} 
           >
             <svg
-              className="w-6 h-6 -rotate-45"
+              className="w-5 h-5 -rotate-45"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -27,10 +27,10 @@ const Button = ({ text, color }) => {
             </svg>
           </div>
         </span>
-        <span className="absolute left-4 -transl group-hover:translate-x-0 ease-out duration-200">
-          <div className={`${color} p-2 rounded-full`}>
+        <span className="absolute left-5 ease-out duration-200">
+          <div className={`${color} ${fontClr} p-2 rounded-full`}>
             <svg
-              className="w-6 h-6 -rotate-45"
+              className="w-5 h-5 -rotate-45"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const Button = ({ text, color }) => {
           </div>
         </span>
         <span
-          className={`${color} relative w-full text-left transition-colors duration-200 ease-in-out  rounded-full px-4 py-2 text-lg`}
+          className={`${color} relative w-full text-left transition-colors duration-200 ease-in-out  rounded-full px-4 py-2 font-bold ${fontClr}`}
         >
           {text}
         </span>
