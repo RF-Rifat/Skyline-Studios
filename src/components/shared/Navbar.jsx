@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Button from "../Button/Button";
+import Button from "./Button/Button";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [stickyClass, setStickyClass] = useState("relative");
+  const [stickyClass, setStickyClass] = useState("");
 
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
@@ -16,7 +16,7 @@ const Navbar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
       windowHeight > 500
-        ? setStickyClass("fixed top-0 left-0 z-50")
+        ? setStickyClass("fixed top-0 left-0 z-20")
         : setStickyClass("relative");
     }
   };
@@ -50,9 +50,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 z-50 bg-transparent py-4 px-10 max-w-screen-2xl ${stickyClass}`}
+        className={` z-20 bg-transparent py-4 px-10 max-w-screen-2xl ${stickyClass}`}
       >
-        <div className=" flex flex-wrap items-center justify-between mx-auto">
+        <div className="grid grid-flow-col items-center justify-between mx-auto">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
@@ -60,7 +60,7 @@ const Navbar = () => {
             <img src="/logoBlack.svg" className="h-6" alt="Nav Logo" />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex justify-end w-52">
               <Button
                 text={"Contact Us"}
                 color={"bg-[#FFFF00]"}

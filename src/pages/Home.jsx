@@ -1,11 +1,11 @@
-import HeroSection from "../components/Hero/HeroSection";
-import Navbar from "../components/shared/Navbar";
+import Experience from "../components/Home/Experience/Experience";
+import HeroSection from "../components/Home/Hero/HeroSection";
 
 const Home = () => {
   return (
     <>
-      <Navbar />
       <HeroSection />
+      <Experience/>
     </>
   );
 };
