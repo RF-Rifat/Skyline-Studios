@@ -1,32 +1,14 @@
-import { useState, useRef } from "react";
-import {
-  motion,
-  useAnimation,
-  useViewportScroll,
-} from "framer-motion";
+import { useRef } from "react";
+import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import "./Spin.css";
 import { useFollowPointer } from "./useFollowPointer";
 
 const Experience = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
   const videoRef = useRef(null);
   const ref = useRef(null);
   const controls = useAnimation();
   const { scrollY } = useViewportScroll();
   const { x, y } = useFollowPointer(ref);
-
-  //   const handleMouseMove = (e) => {
-  //     setMousePosition({ x: e.clientX, y: e.clientY });
-  //   };
-
-  //   const handleMouseEnter = () => {
-  //     setIsHovering(true);
-  //   };
-
-  //   const handleMouseLeave = () => {
-  //     setIsHovering(false);
-  //   };
 
   const handleVideoClick = () => {
     const video = videoRef.current;
@@ -38,7 +20,7 @@ const Experience = () => {
   };
 
   scrollY.onChange((latest) => {
-    const scale = Math.max(0.2, 1 - latest / 1000);
+    const scale = Math.max(0.1, 1 - latest / 1000);
     controls.start({ scale: scale });
   });
 
@@ -47,11 +29,6 @@ const Experience = () => {
       <div className="showreel-sticky">
         <div className="about-title-content text-center">
           <motion.section
-            className="video-area"
-            // onMouseMove={handleMouseMove}
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            data-w-id="d9e2158d-dfd8-5a4e-bf9b-c7818e8daff5"
             style={{
               willChange: "transform, width, height",
               transform:
@@ -90,8 +67,6 @@ const Experience = () => {
               }}
               style={{
                 position: "absolute",
-                top: mousePosition.y,
-                left: mousePosition.x,
               }}
             >
               <div
