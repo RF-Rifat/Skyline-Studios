@@ -35,16 +35,17 @@ const Experience = () => {
     controls.start({ scale: scale });
     setIsScrolled(latest > 0);
   });
-   scrollY.onChange((latest) => {
-     const size = Math.max(1, 1 + latest / 1000);
-     textControls.start({ scale: size });
-     setIsScrolled(latest > 0);
-   });
+  scrollY.onChange((latest) => {
+    const size = Math.max(1, 1 + latest / 800);
+    textControls.start({ scale: size });
+    setIsScrolled(latest > 0);
+  });
 
   return (
     <div className="bg-white overflow-hidden relative">
       <div className="text-center">
         <motion.section
+          className="relative"
           style={{
             willChange: "transform, width, height",
             transform:
@@ -104,72 +105,36 @@ const Experience = () => {
               />
             </div>
           </motion.div>
+          <motion.div
+            className={`absolute top-16 mx-auto w-full`}
+            animate={textControls}
+            data-aos="fade-down"
+          >
+            Elevating UX, Empowering
+          </motion.div>
+          <motion.div
+            className="absolute bottom-0 left-1/2"
+            animate={textControls}
+            data-aos="fade-down"
+          >
+            Experiences...
+          </motion.div>
+          <motion.div
+            className="absolute left-0 translate-x-1/2"
+            animate={textControls}
+            data-aos="fade-down"
+          >
+            Businesses,
+          </motion.div>
+          <motion.div
+            className="absolute right-0"
+            animate={textControls}
+            data-aos="fade-down"
+          >
+            Redefining
+          </motion.div>
         </motion.section>
       </div>
-      <motion.div
-        className="absolute top-0"
-        animate={textControls}
-        data-aos="fade-down"
-      >
-        Elevating UX, Empowering
-      </motion.div>
-      <motion.div
-        className="absolute bottom-0 text-center"
-        animate={textControls}
-        data-aos="fade-down"
-      >
-        Experiences...
-      </motion.div>
-      <motion.div
-        className="absolute left-0 translate-x-1/2"
-        animate={textControls}
-        data-aos="fade-down"
-      >
-        Businesses,
-      </motion.div>
-      <motion.div
-        className="absolute right-0"
-        animate={textControls}
-        data-aos="fade-down"
-      >
-        Redefining
-      </motion.div>
-      {/* {isScrolled && (
-        <div className="flex justify-between">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="text-block"
-          >
-            Text 1
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-block"
-          >
-            Text 2
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-block"
-          >
-            Text 3
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-block"
-          >
-            Text 4
-          </motion.div>
-        </div>
-      )} */}
       <ExDesc />
     </div>
   );

@@ -9,9 +9,8 @@ const Root = () => {
   }, []);
   return (
     <>
-      <div className="absolute top-0 z-50 w-full">
-        <Navbar />
-      </div>
+      <Navbar />
+
       <Outlet />
     </>
   );

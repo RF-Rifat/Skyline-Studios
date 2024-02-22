@@ -3,23 +3,42 @@ import Button from "./Button/Button";
 import { useEffect, useState } from "react";
 
 const Navbar = () => {
-  const [stickyClass, setStickyClass] = useState("");
+  // const [stickyClass, setStickyClass] = useState("");
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", stickNavbar);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", stickNavbar);
+  //   };
+  // }, [stickyClass]);
+  // const stickNavbar = () => {
+  //   if (window !== undefined) {
+  //     let windowHeight = window.scrollY;
+  //     windowHeight > 500
+  //       ? setStickyClass("fixed top-0 left-0 z-20")
+  //       : setStickyClass("relative");
+  //   }
+  // };
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [top, setTop] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", stickNavbar);
-
-    return () => {
-      window.removeEventListener("scroll", stickNavbar);
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      console.log(top);
+      if (prevScrollpos > currentScrollPos) {
+        setTop(0);
+      } else {
+        setTop(-100);
+      }
+      setPrevScrollpos(currentScrollPos);
     };
-  }, [stickyClass]);
-  const stickNavbar = () => {
-    if (window !== undefined) {
-      let windowHeight = window.scrollY;
-      windowHeight > 500
-        ? setStickyClass("fixed top-0 left-0 z-20")
-        : setStickyClass("relative");
-    }
-  };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollpos]);
 
   const NavLinks = [
     {
@@ -50,7 +69,14 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={` z-20 bg-transparent py-4 px-10 max-w-screen-2xl ${stickyClass}`}
+        // className={` z-20 bg-transparent py-4 px-10 max-w-screen-2xl`}
+        style={{
+          position: "sticky",
+          top: `${top}px`,
+          zIndex: 100,
+          background: "white",
+          transition: "all 0.4s ease-out",
+        }}
       >
         <div className="grid grid-flow-col items-center justify-between mx-auto">
           <Link

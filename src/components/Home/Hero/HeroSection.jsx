@@ -21,12 +21,12 @@ const HeroSection = () => {
                 Musemind is a global UX Design and Web Design Agency. Helping
                 Brands redefine experiences and empower business growth.
               </p>
-              <div className="mt-12 sm:flex sm:justify-center lg:justify-start">
+              <div className="mt-12 flex justify-start">
                 <Button
                   text={"Contact Us"}
                   color={"bg-[#FFFF00]"}
                   fontClr={"text-[#000000]"}
-                  pad={"p-4"}
+                  pad={"p-3"}
                 />
               </div>
             </div>

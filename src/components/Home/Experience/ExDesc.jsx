@@ -2,7 +2,7 @@ import Button from "../../shared/Button/Button";
 
 const ExDesc = () => {
   return (
-    <div className="container" data-aos="fade-up">
+    <div className="max-w-4xl mx-auto" data-aos="fade-up">
       <div className="who-section-content-wrap">
         <div className="section-cotent-wrap">
           <p
@@ -19,7 +19,6 @@ const ExDesc = () => {
             collaborating with diverse industries and expertise.
           </p>
           <p
-            
             style={{
               opacity: 1,
               transform:
