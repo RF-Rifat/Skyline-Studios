@@ -19,7 +19,7 @@ const ExDesc = () => {
             collaborating with diverse industries and expertise.
           </p>
           <p
-            data-w-id="954fc76a-d0a8-2bc6-c40a-242ac4246118"
+            
             style={{
               opacity: 1,
               transform:
