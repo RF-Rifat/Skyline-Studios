@@ -113,14 +113,14 @@ const Experience = () => {
             Elevating UX, Empowering
           </motion.div>
           <motion.div
-            className="absolute bottom-0 left-1/2"
+            className="absolute bottom-20 left-1/2"
             animate={textControls}
             data-aos="fade-down"
           >
             Experiences...
           </motion.div>
           <motion.div
-            className="absolute left-0 translate-x-1/2"
+            className="absolute left-0 bottom- translate-x-1/2"
             animate={textControls}
             data-aos="fade-down"
           >

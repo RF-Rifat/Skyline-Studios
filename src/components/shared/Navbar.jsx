@@ -69,12 +69,12 @@ const Navbar = () => {
   return (
     <>
       <nav
-        // className={` z-20 bg-transparent py-4 px-10 max-w-screen-2xl`}
+        className={`bg-heroBg py-4 px-10`}
         style={{
           position: "sticky",
           top: `${top}px`,
           zIndex: 100,
-          background: "white",
+
           transition: "all 0.4s ease-out",
         }}
       >

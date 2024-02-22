@@ -5,7 +5,7 @@ const Button = ({ text, color, fontClr,pad="p-2" }) => {
     <>
       <Link
         href="/"
-        className="relative inline-flex items-center justify-start py-3 pl-4 pr-14 overflow-hidden font-semibold transition-all duration-300 ease-in-out rounded hover:pl-14 hover:pr-6 group"
+        className="relative inline-flex items-center justify-start py-3  pr-14 overflow-hidden font-semibold transition-all duration-300 ease-in-out rounded hover:pl-14 hover:pr-6 group"
       >
         <span className="absolute right-0 pr-5 duration-200 ease-out">
           <div
