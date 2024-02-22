@@ -26,6 +26,7 @@ const HeroSection = () => {
                   text={"Contact Us"}
                   color={"bg-[#FFFF00]"}
                   fontClr={"text-[#000000]"}
+                  pad={"p-4"}
                 />
               </div>
             </div>

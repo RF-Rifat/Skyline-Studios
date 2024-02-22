@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-const Button = ({ text, color, fontClr }) => {
+const Button = ({ text, color, fontClr,pad="p-2" }) => {
   return (
     <>
       <Link
@@ -9,7 +9,7 @@ const Button = ({ text, color, fontClr }) => {
       >
         <span className="absolute right-0 pr-5 duration-200 ease-out">
           <div
-            className={`${color} ${fontClr} p-2 rounded-full group-hover:scale-0 duration-200 ease-out`} 
+            className={`${color} ${fontClr} ${pad} rounded-full group-hover:scale-0 duration-200 ease-out`}
           >
             <svg
               className="w-5 h-5 -rotate-45"
@@ -28,7 +28,7 @@ const Button = ({ text, color, fontClr }) => {
           </div>
         </span>
         <span className="absolute left-5 ease-out duration-200">
-          <div className={`${color} ${fontClr} p-2 rounded-full`}>
+          <div className={`${color} ${fontClr} ${pad} p-2 rounded-full`}>
             <svg
               className="w-5 h-5 -rotate-45"
               fill="none"
@@ -46,7 +46,7 @@ const Button = ({ text, color, fontClr }) => {
           </div>
         </span>
         <span
-          className={`${color} relative w-full text-left transition-colors duration-200 ease-in-out  rounded-full px-4 py-2 font-bold ${fontClr}`}
+          className={`${color} relative w-full text-left transition-colors duration-200 ease-in-out  rounded-full px-4 font-bold ${fontClr} ${pad}`}
         >
           {text}
         </span>
