@@ -17,7 +17,11 @@ const HeroSection = () => {
               <p className="text-white text-5xl lg:text-8xl mb-4">
                 Design Agency
               </p>
-              <p className="text-2xl" data-aos="fade-right">
+              <p
+                className="text-2xl"
+                data-aos="fade-right"
+                data-aos-duration="3000"
+              >
                 Musemind is a global UX Design and Web Design Agency. Helping
                 Brands redefine experiences and empower business growth.
               </p>
