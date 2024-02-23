@@ -13,7 +13,6 @@ export function ServiceAccordion() {
   const handleOpen = (value) => setOpen(value);
 
   const handleHover = (value) => {
-    console.log(value);
     setOpen(value);
   };
   const accData = [
@@ -68,7 +67,7 @@ export function ServiceAccordion() {
             </div>
           </AccordionHeader>
           <AccordionBody
-            className="text-xl max-w-2xl mb-3 ml-28"
+            className="text-xl max-w-2xl ml-28"
             onClick={() => handleOpen(idx + 1)}
             onMouseEnter={() => handleHover(idx + 1)}
             onMouseLeave={() => handleHover(0)}
