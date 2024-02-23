@@ -6,7 +6,7 @@ const CardContainer = () => {
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
 
-  const ROTATION_RANGE = 50
+  const ROTATION_RANGE = 50;
   const HALF_ROTATION_RANGE = 50;
 
   const handleMouseMove = (e) => {
@@ -32,7 +32,7 @@ const CardContainer = () => {
   };
   return (
     <>
-      <div className="">
+      <div className="flex">
         <motion.div
           ref={ref}
           onMouseMove={handleMouseMove}

@@ -47,7 +47,8 @@ export function ServiceAccordion() {
               loading="lazy"
               alt=""
               className={`scale-50 ${
-                open === idx + 1 && "scale-105 skew-x-3 -rotate-12 duration-300"
+                open === idx + 1 &&
+                "scale-75 skew-x-3 -rotate-12 duration-300"
               }`}
             />
           }
