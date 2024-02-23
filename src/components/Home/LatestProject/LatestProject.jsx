@@ -3,7 +3,9 @@ const LatestProject = () => {
     <>
       <div className="bg-gray-50 px-4 py-10 font-[sans-serif]">
         <div className="max-w-7xl max-md:max-w-lg mx-auto">
-          <h2 className="text-3xl font-extrabold text-[#333]">LATEST BLOGS</h2>
+          <h2 className="text-4xl text-center font-extrabold text-[#333]">
+            Latest Design trends
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="bg-white cursor-pointer rounded overflow-hidden group">
               <div className="relative overflow-hidden">
@@ -23,7 +25,7 @@ const LatestProject = () => {
                 </h3>
                 <button
                   type="button"
-                  className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
+                  //   className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
                 >
                   Branding
                 </button>
@@ -42,13 +44,13 @@ const LatestProject = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#333]">
-                  Hacks to Supercharge Your Day
+                  Why Should Give Your Design Agency The Freedom To Innovate?
                 </h3>
                 <button
                   type="button"
-                  className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
+                  //   className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
                 >
-                  Read More
+                  Business
                 </button>
               </div>
             </div>
@@ -69,9 +71,9 @@ const LatestProject = () => {
                 </h3>
                 <button
                   type="button"
-                  className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
+                  //   className="px-4 py-2 mt-6 rounded text-white text-sm tracking-wider border-none outline-none bg-orange-500 hover:bg-orange-600"
                 >
-                  Read More
+                  Branding
                 </button>
               </div>
             </div>
