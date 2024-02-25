@@ -1,7 +1,7 @@
 const LatestProject = () => {
   return (
     <>
-      <div className="bg-gray-50 px-4 py-10 font-[sans-serif]">
+      <div className="bg-heroBg px-4 py-10 font-[sans-serif]">
         <div className="max-w-7xl max-md:max-w-lg mx-auto">
           <h2 className="text-4xl text-center font-extrabold text-[#333]">
             Latest Design trends
@@ -15,11 +15,11 @@ const LatestProject = () => {
                   className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
                 />
                 <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">
-                  June 10, 2023
+                  June 10, 2024
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#333]">
+              <div className="p-6 group-hover:bg-white bg-blue-gray-50">
+                <h3 className="text-xl font-extrabold h-28 text-[#333]">
                   The Art of Visual Branding: How to Leverage Brand Elements to
                   Establish Your
                 </h3>
@@ -39,11 +39,11 @@ const LatestProject = () => {
                   className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
                 />
                 <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">
-                  April 20, 2023
+                  Feb 20, 2024
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#333]">
+              <div className="p-6 group-hover:bg-white bg-blue-gray-50">
+                <h3 className="text-xl font-extrabold h-28 text-[#333]">
                   Why Should Give Your Design Agency The Freedom To Innovate?
                 </h3>
                 <button
@@ -62,12 +62,12 @@ const LatestProject = () => {
                   className="w-full h-60 object-cover group-hover:scale-125 transition-all duration-300"
                 />
                 <div className="px-4 py-2.5 text-white text-sm tracking-wider bg-orange-500 absolute bottom-0 right-0">
-                  August 16, 2023
+                  Jan 16, 2024
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-[#333]">
-                  Trends and Predictions
+              <div className="p-6 group-hover:bg-white bg-blue-gray-50">
+                <h3 className="text-xl font-extrabold h-28 text-[#333]">
+                  Rebranding with Purpose: Embracing Growth and Transformation
                 </h3>
                 <button
                   type="button"
