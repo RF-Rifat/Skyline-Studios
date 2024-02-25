@@ -1,3 +1,4 @@
+import Contact from "../components/Home/Contact/Contact";
 import Experience from "../components/Home/Experience/Experience";
 import Feedback from "../components/Home/Feedback/Feedback";
 import HeroSection from "../components/Home/Hero/HeroSection";
@@ -13,7 +14,8 @@ const Home = () => {
       <CardContainer />
       <Services />
       <Feedback />
-      <LatestProject/>
+      <LatestProject />
+      <Contact />
     </>
   );
 };
