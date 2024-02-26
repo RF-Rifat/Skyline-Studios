@@ -37,17 +37,17 @@ const Experience = () => {
   useEffect(() => {
     scrollY.onChange((latest) => {
       const scale = Math.max(0.1, 1 - latest / 1000);
-      controls.start({ scale: hasScrolledToOtherPage ? scale : 1 }); 
+      controls.start({ scale: hasScrolledToOtherPage ? scale : 1 });
       setIsScrolled(latest > 0);
       if (!hasScrolledToOtherPage && latest > 100) {
-        setHasScrolledToOtherPage(true); 
+        setHasScrolledToOtherPage(true);
       }
     });
   }, [scrollY, controls, hasScrolledToOtherPage]);
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const size = Math.max(1, 1 + latest / 800);
+      const size = Math.max(1, 1 + latest / 600);
       textControls.start({ scale: size });
       setIsScrolled(latest > 0);
     });
@@ -125,25 +125,25 @@ const Experience = () => {
             Elevating UX, Empowering
           </motion.div>
           <motion.div
-            className="absolute bottom-20 left-1/2"
+            className="absolute left-52 h-full my-auto"
             animate={textControls}
-            data-aos="fade-down"
-          >
-            Experiences...
-          </motion.div>
-          <motion.div
-            className="absolute left-0 bottom- translate-x-1/2"
-            animate={textControls}
-            data-aos="fade-down"
+            data-aos="fade-right"
           >
             Businesses,
           </motion.div>
           <motion.div
-            className="absolute right-0"
+            className="absolute right-52 h-full my-auto"
             animate={textControls}
-            data-aos="fade-down"
+            data-aos="fade-left"
           >
             Redefining
+          </motion.div>
+          <motion.div
+            className="absolute bottom-40 mx-auto w-full"
+            animate={textControls}
+            data-aos="fade-up"
+          >
+            Experiences...
           </motion.div>
         </motion.section>
       </div>

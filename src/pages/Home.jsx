@@ -4,6 +4,7 @@ import Feedback from "../components/Home/Feedback/Feedback";
 import HeroSection from "../components/Home/Hero/HeroSection";
 import LatestProject from "../components/Home/LatestProject/LatestProject";
 import CardContainer from "../components/Home/Projects/CardContainer";
+import Projects from "../components/Home/Projects/Projects";
 import Services from "../components/Home/Services/Services";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <HeroSection />
       <Experience />
       <CardContainer />
+      <Projects />
       <Services />
       <Feedback />
       <LatestProject />
