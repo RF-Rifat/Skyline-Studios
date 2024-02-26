@@ -5,13 +5,15 @@ import { useAnimate, stagger, motion } from "framer-motion";
 export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
   const [scope, animate] = useAnimate();
-  const items = ["Item 1", "Item 2", "Item 3", "Item 4"];
-
-  // the stagger effect
+  const items = [
+    "Services",
+    "About Us",
+    "Work",
+    "Our Process",
+    "Career",
+    "Blog",
+  ];
   const staggerList = stagger(0.1, { startDelay: 0.25 });
-
-  // create the animations that will be applied
-  // whenever the open state is toggled
 
   useEffect(() => {
     animate(
@@ -66,9 +68,12 @@ export default function MobileNavbar() {
           />
         </svg>
       </motion.button>
-      <ul className="absolute top-14 right-10 h-[60svh] w-[60vw]">
+       
+      <ul className="absolute top-14 right-10 ul">
         {items.map((item, index) => (
-          <motion.li key={index}>{item}</motion.li>
+          <motion.li className="li" key={index}>
+            {item}
+          </motion.li>
         ))}
       </ul>
     </div>

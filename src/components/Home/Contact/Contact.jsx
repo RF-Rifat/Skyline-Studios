@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="bg-heroBg p-10 relative overflow-hidden">
       <div>
         <div
-          className="grid grid-cols-2"
+          className="grid lg:grid-cols-2"
           // style={{
           //   backgroundImage:
           //     "url('https://assets-global.website-files.com/643f7373d3f6653157617339/65a67cc6a52043fdbaf05e77_Contact%20Bg.webp')",
@@ -21,7 +21,7 @@ const Contact = () => {
           // }}
         >
           <div className="relative">
-            <h2 className="text-white mb-52 text-7xl mx-20 font-semibold">
+            <h2 className="text-white mb-10 lg:mb-52 text-left text-4xl lg:text-7xl mx-6 lg:mx-20 font-semibold">
               Have a Project Idea?
             </h2>
           </div>
@@ -102,18 +102,8 @@ const Contact = () => {
             </form>
           </div>
         </div>
-        {/* <div
-          className="absolute bottom-6 top-1 bg-no-repeat bg-deep-orange-800 bg-[url('https://assets-global.website-files.com/643f7373d3f6653157617339/65a67cc6a52043fdbaf05e77_Contact%20Bg.webp')]"
-          // style={{
-          //   // backgroundImage:
-          //   //   "url('https://assets-global.website-files.com/643f7373d3f6653157617339/65a67cc6a52043fdbaf05e77_Contact%20Bg.webp')",
-          //   // backgroundRepeat: "no-repeat",
-          //   // mixBlendMode: "soft-light",
-          // }}
-        >
-          
-        </div> */}
-        <div className="absolute top-0 right-auto mix-blend-soft-light">
+       
+        <div className="absolute top-0 right-auto mix-blend-soft-light hidden lg:block">
           <img
             src={
               "https://assets-global.website-files.com/643f7373d3f6653157617339/65a67cc6a52043fdbaf05e77_Contact%20Bg.webp"

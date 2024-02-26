@@ -54,101 +54,117 @@ const Experience = () => {
   }, [scrollY, textControls]);
 
   return (
-    <div className="bg-white overflow-hidden relative">
-      <div className="text-center">
-        <motion.section
-          className="relative"
-          style={{
-            willChange: "transform, width, height",
-            transform:
-              "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-          }}
-        >
-          <motion.div
-            animate={controls}
-            className="video-embed w-embed relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <video
-              id="experience-video"
-              poster="https://uiart.io/video/MM-reel.gif"
-              loop
-              onClick={handleVideoClick}
-            >
-              <source
-                src="https://uiart.io/video/main_showreel.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </motion.div>
-
-          <motion.div
-            ref={ref}
-            className={!isHovering && "hidden"}
-            animate={{ x, y }}
-            transition={{
-              type: "spring",
-              damping: 3,
-              stiffness: 50,
-              restDelta: 0.001,
-            }}
+    <>
+      <div className="bg-white overflow-hidden relative hidden lg:block">
+        <div className="text-center">
+          <motion.section
+            className="relative"
             style={{
-              position: "absolute",
-              width: "50px",
-              height: "50px",
+              willChange: "transform, width, height",
+              transform:
+                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
             }}
           >
-            <div
-              className="relative h-32 w-32 spin"
-              onClick={handleVideoClick}
+            <motion.div
+              animate={controls}
+              className="video-embed w-embed relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <img
-                src="https://assets-global.website-files.com/643f7373d3f6653157617339/6448e195835c273a8d71af34_Video%20Player%20Icon.svg"
-                alt="play now"
-                className="absolute inset-0 m-auto h-12 w-12"
-              />
-              <img
-                loading="lazy"
-                alt="play now"
-                src="https://assets-global.website-files.com/643f7373d3f6653157617339/648050ec6410b577150dc4cf_video%20text%20circle.svg"
-              />
-            </div>
-          </motion.div>
-          <motion.div
-            className={`absolute top-16 mx-auto w-full`}
-            animate={textControls}
-            data-aos="fade-down"
-          >
-            Elevating UX, Empowering
-          </motion.div>
-          <motion.div
-            className="absolute left-52 h-full my-auto"
-            animate={textControls}
-            data-aos="fade-right"
-          >
-            Businesses,
-          </motion.div>
-          <motion.div
-            className="absolute right-52 h-full my-auto"
-            animate={textControls}
-            data-aos="fade-up-right"
-          >
-            Redefining
-          </motion.div>
-          <motion.div
-            className="absolute bottom-40 mx-auto w-full"
-            animate={textControls}
-            data-aos="fade-up"
-          >
-            Experiences...
-          </motion.div>
-        </motion.section>
+              <video
+                id="experience-video"
+                poster="https://uiart.io/video/MM-reel.gif"
+                loop
+                onClick={handleVideoClick}
+              >
+                <source
+                  src="https://uiart.io/video/main_showreel.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </motion.div>
+
+            <motion.div
+              ref={ref}
+              className={!isHovering && "hidden"}
+              animate={{ x, y }}
+              transition={{
+                type: "spring",
+                damping: 3,
+                stiffness: 50,
+                restDelta: 0.001,
+              }}
+              style={{
+                position: "absolute",
+                width: "50px",
+                height: "50px",
+              }}
+            >
+              <div
+                className="relative h-32 w-32 spin"
+                onClick={handleVideoClick}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <img
+                  src="https://assets-global.website-files.com/643f7373d3f6653157617339/6448e195835c273a8d71af34_Video%20Player%20Icon.svg"
+                  alt="play now"
+                  className="absolute inset-0 m-auto h-12 w-12"
+                />
+                <img
+                  loading="lazy"
+                  alt="play now"
+                  src="https://assets-global.website-files.com/643f7373d3f6653157617339/648050ec6410b577150dc4cf_video%20text%20circle.svg"
+                />
+              </div>
+            </motion.div>
+            <motion.div
+              className={`absolute top-16 mx-auto w-full`}
+              animate={textControls}
+              data-aos="fade-down"
+            >
+              Elevating UX, Empowering
+            </motion.div>
+            <motion.div
+              className="absolute left-52 h-full my-auto"
+              animate={textControls}
+              data-aos="fade-right"
+            >
+              Businesses,
+            </motion.div>
+            <motion.div
+              className="absolute right-52 h-full my-auto"
+              animate={textControls}
+              data-aos="fade-up-right"
+            >
+              Redefining
+            </motion.div>
+            <motion.div
+              className="absolute bottom-40 mx-auto w-full"
+              animate={textControls}
+              data-aos="fade-up"
+            >
+              Experiences...
+            </motion.div>
+          </motion.section>
+        </div>
+        <ExDesc />
       </div>
-      <ExDesc />
-    </div>
+
+      <div className="lg:hidden">
+        <video
+          id="experience-video"
+          poster="https://uiart.io/video/MM-reel.gif"
+          loop
+          onClick={handleVideoClick}
+        >
+          <source
+            src="https://uiart.io/video/main_showreel.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
+    </>
   );
 };
 
