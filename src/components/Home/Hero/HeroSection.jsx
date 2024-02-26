@@ -3,7 +3,7 @@ import Button from "../../shared/Button/Button";
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-heroBg font-[sans-serif] relative h-[90svh] overflow-hidden pt-20">
+      <div className="bg-heroBg font-[sans-serif] relative h-[90svh] overflow-hidden xl:pt-20">
         <div className="flex">
           <div className="mx-auto py-16 px-4 w-8/12">
             <div className="relative z-10 text-center lg:text-left">
@@ -14,7 +14,7 @@ const HeroSection = () => {
                 <br className="xl:hidden" />
                 <span className="text-white"> UX</span>
               </h1>
-              <p className="text-white text-5xl lg:text-8xl mb-4">
+              <p className="text-white text-5xl xl:text-8xl mb-4">
                 Design Agency
               </p>
               <p
@@ -25,7 +25,7 @@ const HeroSection = () => {
                 Musemind is a global UX Design and Web Design Agency. Helping
                 Brands redefine experiences and empower business growth.
               </p>
-              <div className="mt-12 flex justify-start">
+              <div className="mt-4 xl:mt-12 flex lg:justify-start justify-center">
                 <Button
                   text={"Contact Us"}
                   color={"bg-[#FFFF00]"}
