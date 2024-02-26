@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useAnimation, useViewportScroll } from "framer-motion";
 import "./Spin.css";
 import { useFollowPointer } from "./useFollowPointer";
@@ -12,13 +12,17 @@ const Experience = () => {
   const { x, y } = useFollowPointer(ref);
   const [isHovering, setIsHovering] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [hasScrolledToOtherPage, setHasScrolledToOtherPage] = useState(false);
 
   const handleVideoClick = () => {
-    const video = ref.current;
-    if (video?.paused) {
-      video.pause();
-    } else if (video) {
+    const video = document.getElementById("experience-video");
+    if (video.paused) {
       video.play();
+      setIsVideoPlaying(true);
+    } else {
+      video.pause();
+      setIsVideoPlaying(false);
     }
   };
 
@@ -30,16 +34,24 @@ const Experience = () => {
     setIsHovering(false);
   };
 
-  scrollY.onChange((latest) => {
-    const scale = Math.max(0.1, 1 - latest / 1000);
-    controls.start({ scale: scale });
-    setIsScrolled(latest > 0);
-  });
-  scrollY.onChange((latest) => {
-    const size = Math.max(1, 1 + latest / 800);
-    textControls.start({ scale: size });
-    setIsScrolled(latest > 0);
-  });
+  useEffect(() => {
+    scrollY.onChange((latest) => {
+      const scale = Math.max(0.1, 1 - latest / 1000);
+      controls.start({ scale: hasScrolledToOtherPage ? scale : 1 }); 
+      setIsScrolled(latest > 0);
+      if (!hasScrolledToOtherPage && latest > 100) {
+        setHasScrolledToOtherPage(true); 
+      }
+    });
+  }, [scrollY, controls, hasScrolledToOtherPage]);
+
+  useEffect(() => {
+    scrollY.onChange((latest) => {
+      const size = Math.max(1, 1 + latest / 800);
+      textControls.start({ scale: size });
+      setIsScrolled(latest > 0);
+    });
+  }, [scrollY, textControls]);
 
   return (
     <div className="bg-white overflow-hidden relative">
@@ -59,7 +71,7 @@ const Experience = () => {
             onMouseLeave={handleMouseLeave}
           >
             <video
-              ref={ref}
+              id="experience-video"
               poster="https://uiart.io/video/MM-reel.gif"
               loop
               onClick={handleVideoClick}
