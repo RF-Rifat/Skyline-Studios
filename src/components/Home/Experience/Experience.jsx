@@ -134,7 +134,7 @@ const Experience = () => {
           <motion.div
             className="absolute right-52 h-full my-auto"
             animate={textControls}
-            data-aos="fade-left"
+            data-aos="fade-up-right"
           >
             Redefining
           </motion.div>

@@ -1,25 +1,9 @@
 import { Link } from "react-router-dom";
 import Button from "./Button/Button";
 import { useEffect, useState } from "react";
+import MobileNavbar from "./MobileNavbar";
 
 const Navbar = () => {
-  // const [stickyClass, setStickyClass] = useState("");
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", stickNavbar);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", stickNavbar);
-  //   };
-  // }, [stickyClass]);
-  // const stickNavbar = () => {
-  //   if (window !== undefined) {
-  //     let windowHeight = window.scrollY;
-  //     windowHeight > 500
-  //       ? setStickyClass("fixed top-0 left-0 z-20")
-  //       : setStickyClass("relative");
-  //   }
-  // };
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [top, setTop] = useState(0);
 
@@ -93,9 +77,10 @@ const Navbar = () => {
                 fontClr={"text-[#000000]"}
               />
             </div>
-            <button
+            {/* <button
+              data-collapse-toggle="navbar-sticky"
               type="button"
-              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none"
               aria-controls="navbar-sticky"
               aria-expanded="false"
             >
@@ -115,13 +100,14 @@ const Navbar = () => {
                   d="M1 1h15M1 7h15M1 13h15"
                 />
               </svg>
-            </button>
+            </button> */}
+            <MobileNavbar />
           </div>
           <div
-            className="items-center justify-between hidden w-full lg:flex md:w-auto md:order-1"
+            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row">
+            <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row">
               {NavLinks.map((item) => (
                 <li key={item.title}>
                   <Link
