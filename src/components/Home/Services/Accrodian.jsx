@@ -47,8 +47,7 @@ export function ServiceAccordion() {
               loading="lazy"
               alt=""
               className={`scale-50 ${
-                open === idx + 1 &&
-                "scale-75 skew-x-3 -rotate-12 duration-300"
+                open === idx + 1 && "scale-75 skew-x-3 -rotate-12 duration-300"
               }`}
             />
           }
@@ -62,13 +61,15 @@ export function ServiceAccordion() {
               open === idx + 1 ? "text-white hover:!text-white" : ""
             }`}
           >
-            <div className="text-5xl">
-              <span className="text-yellow-400 text-3xl pr-28">{idx + 1}</span>{" "}
+            <div className="text-3xl md:text-5xl">
+              <span className="text-yellow-400 text-2xl md:text-3xl pr-10 lg:pr-28">
+                {idx + 1}
+              </span>{" "}
               {item?.title}
             </div>
           </AccordionHeader>
           <AccordionBody
-            className="text-xl max-w-2xl ml-28"
+            className="text-lg md:text-xl max-w-2xl ml-10 lg:ml-28"
             onClick={() => handleOpen(idx + 1)}
             onMouseEnter={() => handleHover(idx + 1)}
             onMouseLeave={() => handleHover(0)}

@@ -6,7 +6,7 @@ const ProjectCard = () => {
     <>
       <div
         className="scroll-into-view-bottom w-full p-10"
-        data-aos="fade-down-right"
+        data-aos="zoom-in-right"
       >
         <Tilt
           href="/case-study/cartize"
@@ -18,8 +18,8 @@ const ProjectCard = () => {
             alt="fitlab project by musemind"
             className="h-[35cqw] w-full"
           />
-          <div className="case-studies-quick-block absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
-            <div className="case-studies-quick flex items-center justify-center">
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
+            <div className="flex items-center justify-center">
               <div className="w-10 h-10 flex items-center justify-center text-white">
                 <svg
                   width="24"
@@ -35,7 +35,7 @@ const ProjectCard = () => {
                 </svg>
               </div>
             </div>
-            <div className="case-studies-quick bg-white flex items-center justify-center">
+            <div className="bg-white flex items-center justify-center rounded-full">
               <div className="w-10 h-10 flex items-center justify-center text-black">
                 <svg
                   width="24"
@@ -54,10 +54,7 @@ const ProjectCard = () => {
           </div>
         </Tilt>
         <div className="case-studies-content mt-4">
-          <a
-            href="/case-study/cartize"
-            className="case-studies-title-block w-full block"
-          >
+          <a href="" className="case-studies-title-block w-full block">
             <div className="text-white">
               Cartiziee - On Demand Food Delivery
             </div>
