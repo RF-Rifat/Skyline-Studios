@@ -2,7 +2,7 @@ const LatestProject = () => {
   return (
     <>
       <div className="bg-heroBg px-4 py-10 font-[sans-serif]">
-        <div className="max-w-7xl max-md:max-w-lg mx-auto">
+        <div className="max-md:max-w-lg max-w-[1440px] mx-auto">
           <h2 className="text-4xl text-center font-extrabold text-[#333]">
             Latest Design trends
           </h2>

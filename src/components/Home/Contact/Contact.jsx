@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div className="bg-heroBg p-10 relative overflow-hidden">
-      <div>
+      <div className="max-w-[1440px] mx-auto">
         <div
           className="grid lg:grid-cols-2"
           // style={{
@@ -102,7 +102,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-       
+
         <div className="absolute top-0 right-auto mix-blend-soft-light hidden lg:block">
           <img
             src={

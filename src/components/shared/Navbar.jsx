@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-heroBg py-4 px-10`}
+        className={`bg-heroBg py-4 px-10 `}
         style={{
           position: "sticky",
           top: `${top}px`,
@@ -62,7 +62,7 @@ const Navbar = () => {
           transition: "all 0.4s ease-out",
         }}
       >
-        <div className="grid grid-flow-col items-center justify-between mx-auto">
+        <div className="grid grid-flow-col items-center justify-between mx-auto max-w-[1440px]">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"

@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="bg-heroBg font-[sans-serif] relative h-[90svh] overflow-hidden xl:pt-20">
-        <div className="flex">
+        <div className="flex max-w-[1440px] mx-auto">
           <div className="mx-auto py-16 px-4 lg:w-8/12">
             <div className="relative z-10 text-center lg:text-left">
               <h1 className="tracking-tight leading-snug font-semibold text-5xl lg:text-8xl">
