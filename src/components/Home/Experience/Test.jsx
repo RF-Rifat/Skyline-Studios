@@ -36,7 +36,7 @@ const Experience = () => {
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const scale = Math.max(0.1, 1 - latest / 1000);
+      const scale = Math.max(0.1, 1 - latest / 20000);
       controls.start({ scale: hasScrolledToOtherPage ? scale : 1 });
       setIsScrolled(latest > 0);
       if (!hasScrolledToOtherPage && latest > 100) {
@@ -58,16 +58,20 @@ const Experience = () => {
       <div className="bg-white overflow-hidden relative hidden lg:block">
         <div className="text-center">
           <motion.section
-            // animate={controls}
+            animate={controls}
             className="relative"
-            style={{
-              willChange: "transform, width, height",
-              transform:
-                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-            }}
+            // style={{
+            //   willChange: "transform, width, height",
+            //   transform:
+            //     "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            // }}
           >
             <motion.div
-              animate={controls}
+              // animate={controls}
+              style={{
+                width: "100vw",
+                height: "100svh",
+              }}
               className="video-embed w-embed relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -120,31 +124,28 @@ const Experience = () => {
               </div>
             </motion.div>
             <motion.div
-              className={`absolute top-44 mx-auto w-full`}
+              className={`absolute top-16 mx-auto w-full`}
               animate={textControls}
-              initial={{ scale: 1, opacity: 1 }}
               data-aos="fade-down"
             >
               Elevating UX, Empowering
             </motion.div>
             <motion.div
-              className="absolute left-64 top-1/2 translate-y-1/2"
+              className="absolute left-52 h-full my-auto"
               animate={textControls}
-              initial={{ scale: 1, opacity: 1 }}
               data-aos="fade-right"
             >
               Businesses,
             </motion.div>
             <motion.div
-              className="absolute right-64 top-1/2 translate-y-1/2"
+              className="absolute right-52 h-full my-auto"
               animate={textControls}
               data-aos="fade-up-right"
             >
               Redefining
             </motion.div>
-
             <motion.div
-              className="absolute bottom-60 mx-auto w-full"
+              className="absolute bottom-40 mx-auto w-full"
               animate={textControls}
               data-aos="fade-up"
             >

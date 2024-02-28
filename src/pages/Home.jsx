@@ -1,5 +1,6 @@
 import Contact from "../components/Home/Contact/Contact";
 import Experience from "../components/Home/Experience/Experience";
+import Test from "../components/Home/Experience/Test";
 import Feedback from "../components/Home/Feedback/Feedback";
 import HeroSection from "../components/Home/Hero/HeroSection";
 import LatestProject from "../components/Home/LatestProject/LatestProject";
@@ -12,6 +13,7 @@ const Home = () => {
     <>
       <HeroSection />
       <Experience />
+      {/* <Test /> */}
       {/* <CardContainer /> */}
       <Projects />
       <Services />
