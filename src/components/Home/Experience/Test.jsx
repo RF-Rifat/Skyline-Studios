@@ -36,7 +36,7 @@ const Experience = () => {
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const scale = Math.max(0.1, 1 - latest / 20000);
+      const scale = Math.max(0.1, 1 - latest / 1000);
       controls.start({ scale: hasScrolledToOtherPage ? scale : 1 });
       setIsScrolled(latest > 0);
       if (!hasScrolledToOtherPage && latest > 100) {
@@ -47,7 +47,7 @@ const Experience = () => {
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const size = Math.max(1, 1 + latest / 600);
+      const size = Math.max(1, 1 + latest / 2000);
       textControls.start({ scale: size });
       setIsScrolled(latest > 0);
     });
@@ -58,25 +58,22 @@ const Experience = () => {
       <div className="bg-white overflow-hidden relative hidden lg:block">
         <div className="text-center">
           <motion.section
-            animate={controls}
+            // animate={controls}
             className="relative"
-            // style={{
-            //   willChange: "transform, width, height",
-            //   transform:
-            //     "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-            // }}
+            style={{
+              willChange: "transform, width, height",
+              transform:
+                "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            }}
           >
             <motion.div
-              // animate={controls}
-              style={{
-                width: "100vw",
-                height: "100svh",
-              }}
+              animate={controls}
               className="video-embed w-embed relative"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
               <video
+                className="z-50"
                 id="experience-video"
                 poster="https://uiart.io/video/MM-reel.gif"
                 loop
@@ -123,31 +120,34 @@ const Experience = () => {
                 />
               </div>
             </motion.div>
+
             <motion.div
-              className={`absolute top-16 mx-auto w-full`}
+              className="absolute lg:top-24 xl:top-44 mx-auto w-full text-2xl xl:text-3xl -z-10"
               animate={textControls}
+              // style={{ scale: 1, opacity: 1 }}
               data-aos="fade-down"
             >
               Elevating UX, Empowering
             </motion.div>
             <motion.div
-              className="absolute left-52 h-full my-auto"
+              className="absolute lg:left-36 xl:left-64 top-1/2 translate-y-1/2 text-2xl xl:text-3xl -z-10"
               animate={textControls}
+              // style={{ scale: 1, opacity: 1 }}
               data-aos="fade-right"
             >
               Businesses,
             </motion.div>
             <motion.div
-              className="absolute right-52 h-full my-auto"
+              className="absolute lg:right-40 xl:right-64 top-1/2 translate-y-1/2 text-2xl xl:text-2xl -z-10"
               animate={textControls}
-              data-aos="fade-up-right"
+              data-aos="fade-right"
             >
               Redefining
             </motion.div>
             <motion.div
-              className="absolute bottom-40 mx-auto w-full"
+              className="absolute lg:bottom-28 xl:bottom-60 mx-auto w-full text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              data-aos="fade-up"
+              data-aos="fade-right"
             >
               Experiences...
             </motion.div>

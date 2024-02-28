@@ -120,7 +120,7 @@ const Experience = () => {
               </div>
             </motion.div>
             <motion.div
-              className={`absolute top-44 mx-auto w-full`}
+              className={`absolute top-24 xl:top-44 mx-auto w-full`}
               animate={textControls}
               initial={{ scale: 1, opacity: 1 }}
               data-aos="fade-down"
@@ -128,7 +128,7 @@ const Experience = () => {
               Elevating UX, Empowering
             </motion.div>
             <motion.div
-              className="absolute left-64 top-1/2 translate-y-1/2"
+              className="absolute left-40 xl:left-64 top-1/2 translate-y-1/2"
               animate={textControls}
               initial={{ scale: 1, opacity: 1 }}
               // data-aos="fade-right"
@@ -136,17 +136,17 @@ const Experience = () => {
               Businesses,
             </motion.div>
             <motion.div
-              className="absolute right-64 top-1/2 translate-y-1/2"
+              className="absolute right-40 xl:right-64 top-1/2 translate-y-1/2"
               animate={textControls}
-              // data-aos="fade-up-right"
+              data-aos="fade-right"
             >
               Redefining
             </motion.div>
 
             <motion.div
-              className="absolute bottom-60 mx-auto w-full"
+              className="absolute bottom-28 xl:bottom-60 mx-auto w-full"
               animate={textControls}
-              data-aos="fade-up"
+              data-aos="fade-left"
             >
               Experiences...
             </motion.div>
