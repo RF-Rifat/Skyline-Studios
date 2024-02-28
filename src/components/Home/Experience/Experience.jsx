@@ -47,7 +47,7 @@ const Experience = () => {
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const size = Math.max(1, 1 + latest / 600);
+      const size = Math.max(1, 1 + latest / 800);
       textControls.start({ scale: size });
       setIsScrolled(latest > 0);
     });
@@ -131,14 +131,14 @@ const Experience = () => {
               className="absolute left-64 top-1/2 translate-y-1/2"
               animate={textControls}
               initial={{ scale: 1, opacity: 1 }}
-              data-aos="fade-right"
+              // data-aos="fade-right"
             >
               Businesses,
             </motion.div>
             <motion.div
               className="absolute right-64 top-1/2 translate-y-1/2"
               animate={textControls}
-              data-aos="fade-up-right"
+              // data-aos="fade-up-right"
             >
               Redefining
             </motion.div>
