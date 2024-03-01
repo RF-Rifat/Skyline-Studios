@@ -3,18 +3,18 @@ import Button from "../../shared/Button/Button";
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-heroBg font-[sans-serif] relative h-[90svh] overflow-hidden xl:pt-20">
+      <div className="bg-heroBg font-[sans-serif] relative h-[90svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
         <div className="flex max-w-[1440px] mx-auto">
-          <div className="mx-auto py-16 px-4 lg:w-8/12">
-            <div className="relative z-10 text-center lg:text-left">
-              <h1 className="tracking-tight leading-snug font-semibold text-5xl lg:text-8xl">
+          <div className="mx-auto px-4 lg:w-8/12">
+            <div className="relative z-10 lg:text-left font-semibold">
+              <h1 className="tracking-tight leading-snug font-semibold text-7xl lg:text-8xl">
                 Digital Product{" "}
-                <span className="hidden lg:inline-block">—</span>
-                <span className="lg:hidden">&</span>
-                <br className="xl:hidden" />
+                <span className="hidden md:inline-block">—</span>
+                <span className="md:hidden">&</span>
+                <br className="md:hidden" />
                 <span className="text-white"> UX</span>
               </h1>
-              <p className="text-white text-5xl xl:text-8xl mb-4">
+              <p className="text-white text-7xl xl:text-8xl mb-4">
                 Design Agency
               </p>
               <p

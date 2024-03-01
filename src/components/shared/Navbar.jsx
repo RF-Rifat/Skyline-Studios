@@ -22,7 +22,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollpos]);
+  }, [prevScrollpos, top]);
 
   const NavLinks = [
     {
@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-heroBg py-4 px-16 `}
+        className={`bg-heroBg py-4 px-6 lg:px-16`}
         style={{
           position: "sticky",
           top: `${top}px`,
@@ -107,7 +107,7 @@ const Navbar = () => {
             className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
             id="navbar-sticky"
           >
-            <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row">
+            <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row">
               {NavLinks.map((item) => (
                 <li key={item.title}>
                   <Link
