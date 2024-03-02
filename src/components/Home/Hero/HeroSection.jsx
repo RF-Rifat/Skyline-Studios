@@ -3,7 +3,7 @@ import Button from "../../shared/Button/Button";
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-heroBg font-[sans-serif]  h-[90svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
+      <div className="bg-heroBg font-[sans-serif]  h-[80svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
         <div className="flex max-w-[1440px] mx-auto">
           <div className="mx-auto px-4 lg:w-8/12">
             <div className="relative z-10 lg:text-left font-semibold">
@@ -17,7 +17,7 @@ const HeroSection = () => {
               <p className="text-white text-7xl xl:text-8xl mb-10">
                 Design Agency
               </p>
-              <div className="" data-aos="fade-up" data-aos-duration="1500">
+              <div className="" data-aos="fade-up" data-aos-duration="1000">
                 <p className="text-2xl font-extralight tracking-wider">
                   Musemind is a global UX Design and Web Design Agency. Helping
                   Brands redefine experiences and empower business growth.

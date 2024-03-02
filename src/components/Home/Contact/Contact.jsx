@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-heroBg p-10 relative overflow-hidden">
+    <div className="bg-heroBg p-1 md:p-10 relative overflow-hidden">
       <div className="max-w-[1440px] mx-auto">
         <div
           className="grid lg:grid-cols-2"

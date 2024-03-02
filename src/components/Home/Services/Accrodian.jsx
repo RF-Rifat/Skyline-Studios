@@ -30,6 +30,10 @@ export function ServiceAccordion() {
       title: "UX Design",
       desc: "Exceptional UX isn&apos;t just design; it&apos;s a journey that builds trust, forges loyalty, and makes your brand unforgettable and this is our commitment to you from our UX design agency.",
     },
+    {
+      title: "UX Design",
+      desc: "Exceptional UX isn&apos;t just design; it&apos;s a journey that builds trust, forges loyalty, and makes your brand unforgettable and this is our commitment to you from our UX design agency.",
+    },
   ];
 
   return (
@@ -69,14 +73,14 @@ export function ServiceAccordion() {
             }`}
           >
             <div className="text-4xl md:text-6xl">
-              <span className="text-yellow-400 text-2xl font-light pr-10 lg:pr-16 hover:text-white relative bottom-4">
+              <span className="text-yellow-400 text-2xl font-light pr-10 lg:pr-16 hover:text-white relative md:bottom-4">
                 0{idx + 1}
               </span>{" "}
               {item?.title}
             </div>
           </AccordionHeader>
           <AccordionBody
-            className="text-base md:text-lg max-w-2xl ml-28 lg:ml-32"
+            className="text-base md:text-lg max-w-2xl ml-24 md:ml-28 lg:ml-32"
             // onClick={() => handleOpen(idx + 1)}
             onMouseEnter={() => handleHover(idx + 1)}
             onMouseLeave={() => handleHover(0)}
