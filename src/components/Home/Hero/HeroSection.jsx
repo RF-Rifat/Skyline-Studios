@@ -3,35 +3,33 @@ import Button from "../../shared/Button/Button";
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-heroBg font-[sans-serif] relative h-[90svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
+      <div className="bg-heroBg font-[sans-serif]  h-[90svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
         <div className="flex max-w-[1440px] mx-auto">
           <div className="mx-auto px-4 lg:w-8/12">
             <div className="relative z-10 lg:text-left font-semibold">
-              <h1 className="tracking-tight leading-snug font-semibold text-7xl lg:text-8xl">
+              <h1 className="tracking-tight leading-snug font-bold text-7xl lg:text-8xl">
                 Digital Product{" "}
                 <span className="hidden md:inline-block">—</span>
                 <span className="md:hidden">&</span>
                 <br className="md:hidden" />
                 <span className="text-white"> UX</span>
               </h1>
-              <p className="text-white text-7xl xl:text-8xl mb-4">
+              <p className="text-white text-7xl xl:text-8xl mb-10">
                 Design Agency
               </p>
-              <p
-                className="text-2xl"
-                data-aos="fade-right"
-                data-aos-duration="1500"
-              >
-                Musemind is a global UX Design and Web Design Agency. Helping
-                Brands redefine experiences and empower business growth.
-              </p>
-              <div className="mt-4 xl:mt-12 flex lg:justify-start justify-center">
-                <Button
-                  text={"Contact Us"}
-                  color={"bg-[#FFFF00]"}
-                  fontClr={"text-[#000000]"}
-                  pad={"p-3"}
-                />
+              <div className="" data-aos="fade-up" data-aos-duration="1500">
+                <p className="text-2xl font-extralight tracking-wider">
+                  Musemind is a global UX Design and Web Design Agency. Helping
+                  Brands redefine experiences and empower business growth.
+                </p>
+                <div className="mt-4 xl:mt-12 flex justify-start ">
+                  <Button
+                    text={"Contact Us"}
+                    color={"bg-[#FFFF00]"}
+                    fontClr={"text-[#000000]"}
+                    pad={"p-3"}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -58,6 +56,22 @@ const HeroSection = () => {
               type="video/webm"
             />
           </video>
+        </div>
+        <div className="absolute top-0 left-0 h-[10svh] w-[40vw] inline-block z-50">
+          {/* <video
+            width="100%"
+            height="100%"
+            autoPlay
+            loop
+            muted
+            playsInline
+            // className="inline-block "
+          >
+            <source
+              src="https://uiart.io/video/banner-animation.mov"
+              type="video/webm"
+            />
+          </video> */}
         </div>
       </div>
     </>

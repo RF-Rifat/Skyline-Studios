@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-heroBg py-4 px-6 lg:px-16`}
+        className={`bg-heroBg py-4 px-6 lg:px-16 -z-0`}
         style={{
           position: "sticky",
           top: `${top}px`,
@@ -67,7 +67,7 @@ const Navbar = () => {
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src="/logoBlack.svg" className="h-6" alt="Nav Logo" />
+            <img src="/logoBlack.svg" className="h-7" alt="Nav Logo" />
           </Link>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <div className="hidden lg:flex justify-end w-52">
@@ -103,10 +103,7 @@ const Navbar = () => {
             </button> */}
             <MobileNavbar />
           </div>
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="navbar-sticky"
-          >
+          <div className="items-center justify-between hidden w-full lg:flex md:w-auto ">
             <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row">
               {NavLinks.map((item) => (
                 <li key={item.title}>

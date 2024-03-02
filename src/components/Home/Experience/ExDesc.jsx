@@ -12,7 +12,7 @@ const ExDesc = () => {
                 "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
               transformStyle: "preserve-3d",
             }}
-            className="section-paragraph fw-400 mb-50 color-gray-800 text-2xl"
+            className="section-paragraph fw-400 mb-50 color-gray-800 text-2xl mb-14"
           >
             Welcome to Musemind: Where UX Dreams Soar! As your dedicated UX
             design agency, we transform user insights into dynamic strategies,
@@ -25,7 +25,7 @@ const ExDesc = () => {
                 "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
               transformStyle: "preserve-3d",
             }}
-            className="section-paragraph fw-400 mb-50 color-gray-800 text-2xl"
+            className="section-paragraph fw-400 mb-50 color-gray-800 text-2xl mb-10"
           >
             Our experts utilize tech trends, shaping designs that surpass
             expectations with innovation. Our meticulous process guarantees
@@ -35,11 +35,14 @@ const ExDesc = () => {
             UX&quot; is more than just a tagline; it&apos;s our commitment to
             you.
           </p>
-          <Button
-            text={"Contact Us"}
-            color={"bg-[#FFFF00]"}
-            fontClr={"text-[#000000]"}
-          />
+          <div className="-ml-2">
+            <Button
+              text={"Contact Us"}
+              color={"bg-[#FFFF00]"}
+              fontClr={"text-[#000000]"}
+              pad={"p-3"}
+            />
+          </div>
         </div>
       </div>
     </div>
