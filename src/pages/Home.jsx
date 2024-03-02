@@ -8,17 +8,17 @@ import Services from "../components/Home/Services/Services";
 
 const Home = () => {
   return (
-    <>
+    <div className="font-sans">
       <HeroSection />
       {/* <Experience /> */}
       <Test />
       {/* <CardContainer /> */}
       <Projects />
-      <Services />
       <Feedback />
+      <Services />
       <LatestProject />
       <Contact />
-    </>
+    </div>
   );
 };
 

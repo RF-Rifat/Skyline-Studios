@@ -4,19 +4,16 @@ import Tilt from "react-parallax-tilt";
 const ProjectCard = () => {
   return (
     <>
-      <div
-        className="scroll-into-view-bottom w-full p-10"
-        data-aos="zoom-in-right"
-      >
+      <div className="w-full p-4 lg:p-16 mt-10" data-aos="zoom-in-right">
         <Tilt
-          href="/case-study/cartize"
-          className="case-studies-thumbnail-block w-full block relative overflow-hidden"
+          href=""
+          className="w-full block relative overflow-hidden"
           perspective={2000}
         >
           <img
             src="https://assets-global.website-files.com/643f7373d3f6653157617339/654b53eb6c1dc3dc8100ec13_Cartiz.webp"
-            alt="fitlab project by musemind"
-            className="h-[35cqw] w-full"
+            alt="musemind"
+            className="h-[55svh] md:h-[80svh] w-full"
           />
           <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
             <div className="flex items-center justify-center">
@@ -53,9 +50,9 @@ const ProjectCard = () => {
             </div>
           </div>
         </Tilt>
-        <div className="case-studies-content mt-4">
+        <div className="mt-4">
           <a href="" className="case-studies-title-block w-full block">
-            <div className="text-white">
+            <div className="text-white text-2xl font-semibold">
               Cartiziee - On Demand Food Delivery
             </div>
           </a>

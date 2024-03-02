@@ -1,5 +1,5 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
-/** @type {import('tailwindcss').Config} */
+
 module.exports = withMT({
   content: [
     "./index.html",
@@ -11,6 +11,9 @@ module.exports = withMT({
     extend: {
       colors: {
         heroBg: "#D6DCE1",
+      },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
       },
     },
   },
