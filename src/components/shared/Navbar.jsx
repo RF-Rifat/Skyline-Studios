@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button/Button";
 import { useEffect, useState } from "react";
 import MobileNavbar from "./MobileNavbar";
+import { Sidebar } from "./SideBar";
 
 const Navbar = () => {
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
@@ -101,7 +102,8 @@ const Navbar = () => {
                 />
               </svg>
             </button> */}
-            <MobileNavbar />
+            <Sidebar />
+            {/* <MobileNavbar /> */}
           </div>
           <div className="items-center justify-between hidden w-full lg:flex md:w-auto ">
             <ul className="flex flex-col p-4 md:p-0 font-medium rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row">

@@ -4,7 +4,7 @@ import Tilt from "react-parallax-tilt";
 const ProjectCard = () => {
   return (
     <>
-      <div className="w-full p-4 lg:p-16 mt-10" data-aos="zoom-in-right">
+      <div className="w-full p-[3cqw] mt-10" data-aos="zoom-in-right">
         <Tilt
           href=""
           className="w-full block relative overflow-hidden"
@@ -13,7 +13,7 @@ const ProjectCard = () => {
           <img
             src="https://assets-global.website-files.com/643f7373d3f6653157617339/654b53eb6c1dc3dc8100ec13_Cartiz.webp"
             alt="musemind"
-            className="h-[55svh] md:h-[80svh] w-full"
+            className="h-[55svh] lg:h-[80svh] w-full"
           />
           <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 transition-opacity duration-300 bg-black bg-opacity-50 hover:opacity-100">
             <div className="flex items-center justify-center">

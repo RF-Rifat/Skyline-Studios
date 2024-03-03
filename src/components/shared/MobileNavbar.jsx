@@ -1,6 +1,7 @@
 import "./MobNav.css";
 import { useState, useEffect } from "react";
 import { useAnimate, stagger, motion } from "framer-motion";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
 
 export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
@@ -47,29 +48,14 @@ export default function MobileNavbar() {
         onClick={() => setOpen(!open)}
         whileTap={{ scale: 0.95 }}
         type="button"
-        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none"
-        aria-controls="navbar-sticky"
-        aria-expanded="false"
+        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg lg:hidden focus:outline-none mr-6 lg:mr-0"
       >
-        {/* <span className="sr-only">Open main menu</span> */}
-        <svg
-          className="w-5 h-5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 17 14"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M1 1h15M1 7h15M1 13h15"
-          />
-        </svg>
+        <div className="bg-[#FFFF00] px-5 py-2 text-black flex text-lg items-center rounded-full">
+          <HiOutlineMenuAlt4 className="h-5 w-8" /> <span>Menu</span>
+        </div>
       </motion.button>
-       
-      <ul className="absolute top-14 right-10 ul">
+
+      <ul className="absolute top-10 right-0 ul">
         {items.map((item, index) => (
           <motion.li className="li" key={index}>
             {item}
@@ -79,8 +65,3 @@ export default function MobileNavbar() {
     </div>
   );
 }
-
-
-
-
-
