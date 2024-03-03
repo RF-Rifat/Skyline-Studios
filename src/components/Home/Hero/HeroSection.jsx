@@ -5,9 +5,9 @@ const HeroSection = () => {
     <>
       <div className="bg-heroBg font-[sans-serif]  h-[80svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
         <div className="flex max-w-[1440px] mx-auto">
-          <div className="mx-auto px-4 lg:w-8/12">
+          <div className="mx-auto px-4 xl:w-8/12">
             <div className="relative z-10 lg:text-left font-semibold">
-              <h1 className="tracking-tight leading-snug font-bold text-6xl md:text-7xl lg:text-8xl">
+              <h1 className="tracking-tight leading-snug font-bold text-6xl md:text-7xl xl:text-8xl">
                 Digital Product{" "}
                 <span className="hidden lg:inline-block">—</span>
                 <span className="lg:hidden">&</span>

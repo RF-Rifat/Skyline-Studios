@@ -9,6 +9,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        "3xl": "1440px",
+      },
       colors: {
         heroBg: "#D6DCE1",
       },

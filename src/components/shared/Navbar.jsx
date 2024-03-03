@@ -54,7 +54,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`bg-heroBg py-4 px-6 lg:px-16 -z-0`}
+        className={`bg-heroBg py-4 px-6 3xl:px-16 -z-0`}
         style={{
           position: "sticky",
           top: `${top}px`,

@@ -4,7 +4,7 @@ import "./Spin.css";
 import { useFollowPointer } from "./useFollowPointer";
 import ExDesc from "./ExDesc";
 
-const Experience = () => {
+const Test = () => {
   const ref = useRef(null);
   const controls = useAnimation();
   const textControls = useAnimation();
@@ -14,6 +14,7 @@ const Experience = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [hasScrolledToOtherPage, setHasScrolledToOtherPage] = useState(false);
+  const [isVideoInView, setIsVideoInView] = useState(false);
 
   const handleVideoClick = () => {
     const video = document.getElementById("experience-video");
@@ -37,13 +38,15 @@ const Experience = () => {
   useEffect(() => {
     scrollY.onChange((latest) => {
       const scale = Math.max(0.1, 1 - latest / 1000);
-      controls.start({ scale: hasScrolledToOtherPage ? scale : 1 });
+      if (isVideoInView) {
+        controls.start({ scale: hasScrolledToOtherPage ? scale : 1 });
+      }
       setIsScrolled(latest > 0);
       if (!hasScrolledToOtherPage && latest > 100) {
         setHasScrolledToOtherPage(true);
       }
     });
-  }, [scrollY, controls, hasScrolledToOtherPage]);
+  }, [scrollY, controls, hasScrolledToOtherPage, isVideoInView]);
 
   useEffect(() => {
     scrollY.onChange((latest) => {
@@ -53,12 +56,34 @@ const Experience = () => {
     });
   }, [scrollY, textControls]);
 
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 1.0, 
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsVideoInView(entry.isIntersecting);
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-white overflow-hidden relative hidden lg:block">
         <div className="text-center">
           <motion.section
-            // animate={controls}
             className="relative"
             style={{
               willChange: "transform, width, height",
@@ -66,14 +91,12 @@ const Experience = () => {
                 "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
             }}
           >
-            <motion.div
-              animate={controls}
-              className="video-embed w-embed relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <video
-                className="z-50"
+            <div>
+              <motion.video
+                animate={controls}
+                className="relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 id="experience-video"
                 poster="https://uiart.io/video/MM-reel.gif"
                 loop
@@ -83,8 +106,8 @@ const Experience = () => {
                   src="https://uiart.io/video/main_showreel.mp4"
                   type="video/mp4"
                 />
-              </video>
-            </motion.div>
+              </motion.video>
+            </div>
 
             <motion.div
               ref={ref}
@@ -124,7 +147,6 @@ const Experience = () => {
             <motion.div
               className="absolute lg:top-24 xl:top-44 mx-auto w-full text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              // style={{ scale: 1, opacity: 1 }}
               data-aos="fade-down"
             >
               Elevating UX, Empowering
@@ -132,7 +154,6 @@ const Experience = () => {
             <motion.div
               className="absolute lg:left-36 xl:left-64 top-1/2 translate-y-1/2 text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              // style={{ scale: 1, opacity: 1 }}
               data-aos="fade-right"
             >
               Businesses,
@@ -173,4 +194,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Test;

@@ -47,7 +47,7 @@ const Experience = () => {
 
   useEffect(() => {
     scrollY.onChange((latest) => {
-      const size = Math.max(1, 1 + latest / 800);
+      const size = Math.max(1, 1 + latest / 2000);
       textControls.start({ scale: size });
       setIsScrolled(latest > 0);
     });
@@ -66,13 +66,13 @@ const Experience = () => {
                 "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
             }}
           >
-            <motion.div
-              animate={controls}
-              className="video-embed w-embed relative"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              <video
+            <div>
+              <motion.video
+                animate={controls}
+                className="video-embed w-embed relative"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                // className="z-50"
                 id="experience-video"
                 poster="https://uiart.io/video/MM-reel.gif"
                 loop
@@ -82,8 +82,8 @@ const Experience = () => {
                   src="https://uiart.io/video/main_showreel.mp4"
                   type="video/mp4"
                 />
-              </video>
-            </motion.div>
+              </motion.video>
+            </div>
 
             <motion.div
               ref={ref}
@@ -119,34 +119,34 @@ const Experience = () => {
                 />
               </div>
             </motion.div>
+
             <motion.div
-              className={`absolute top-24 xl:top-44 mx-auto w-full`}
+              className="absolute lg:top-24 xl:top-44 mx-auto w-full text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              initial={{ scale: 1, opacity: 1 }}
+              // style={{ scale: 1, opacity: 1 }}
               data-aos="fade-down"
             >
               Elevating UX, Empowering
             </motion.div>
             <motion.div
-              className="absolute left-40 xl:left-64 top-1/2 translate-y-1/2"
+              className="absolute lg:left-36 xl:left-64 top-1/2 translate-y-1/2 text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              initial={{ scale: 1, opacity: 1 }}
-              // data-aos="fade-right"
+              // style={{ scale: 1, opacity: 1 }}
+              data-aos="fade-right"
             >
               Businesses,
             </motion.div>
             <motion.div
-              className="absolute right-40 xl:right-64 top-1/2 translate-y-1/2"
+              className="absolute lg:right-40 xl:right-64 top-1/2 translate-y-1/2 text-2xl xl:text-2xl -z-10"
               animate={textControls}
               data-aos="fade-right"
             >
               Redefining
             </motion.div>
-
             <motion.div
-              className="absolute bottom-28 xl:bottom-60 mx-auto w-full"
+              className="absolute lg:bottom-28 xl:bottom-60 mx-auto w-full text-2xl xl:text-3xl -z-10"
               animate={textControls}
-              data-aos="fade-left"
+              data-aos="fade-right"
             >
               Experiences...
             </motion.div>

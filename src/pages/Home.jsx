@@ -1,4 +1,5 @@
 import Contact from "../components/Home/Contact/Contact";
+import Experience from "../components/Home/Experience/Test";
 import Test from "../components/Home/Experience/Test";
 import Feedback from "../components/Home/Feedback/Feedback";
 import HeroSection from "../components/Home/Hero/HeroSection";
@@ -10,8 +11,8 @@ const Home = () => {
   return (
     <div className="font-sans">
       <HeroSection />
-      {/* <Experience /> */}
-      <Test />
+      <Experience />
+      {/* <Test /> */}
       {/* <CardContainer /> */}
       <Projects />
       <Feedback />
