@@ -108,7 +108,7 @@ export function ServiceAccordion() {
             alt=""
             className={`hidden lg:block scale-50 absolute -top-1 right-10 ${
               open === idx + 1 &&
-              "scale-110 skew-x-3 -rotate-12 transition-all duration-500 top-20 text-[#bdbfc14c]"
+              "scale-75 skew-x-3 -rotate-12 transition-all duration-500 top-20 text-[#bdbfc14c]"
             }`}
           />
         </Accordion>

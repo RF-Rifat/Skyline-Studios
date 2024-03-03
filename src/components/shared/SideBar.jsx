@@ -17,7 +17,7 @@ export const Sidebar = () => {
     <>
       <div
         onClick={() => setOpen(!open)}
-        className="bg-[#FFFF00] px-5 py-2 text-black flex text-lg items-center rounded-full lg:hidden"
+        className="bg-[#FFFF00] px-5 py-2 text-black flex text-lg items-center rounded-full lg:hidden cursor-pointer"
       >
         <HiOutlineMenuAlt4 className="h-5 w-8" /> <span>Menu</span>
       </div>

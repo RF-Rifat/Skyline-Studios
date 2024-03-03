@@ -7,18 +7,18 @@ const HeroSection = () => {
         <div className="flex max-w-[1440px] mx-auto">
           <div className="mx-auto px-4 lg:w-8/12">
             <div className="relative z-10 lg:text-left font-semibold">
-              <h1 className="tracking-tight leading-snug font-bold text-7xl lg:text-8xl">
+              <h1 className="tracking-tight leading-snug font-bold text-6xl md:text-7xl lg:text-8xl">
                 Digital Product{" "}
-                <span className="hidden md:inline-block">—</span>
-                <span className="md:hidden">&</span>
-                <br className="md:hidden" />
+                <span className="hidden lg:inline-block">—</span>
+                <span className="lg:hidden">&</span>
+                <br className="lg:hidden" />
                 <span className="text-white"> UX</span>
               </h1>
-              <p className="text-white text-7xl xl:text-8xl mb-10">
+              <p className="text-white text-6xl md:text-7xl xl:text-8xl mb-10">
                 Design Agency
               </p>
               <div className="" data-aos="fade-up" data-aos-duration="1000">
-                <p className="text-2xl font-extralight tracking-wider">
+                <p className="text-xl lg:text-2xl font-extralight tracking-wider">
                   Musemind is a global UX Design and Web Design Agency. Helping
                   Brands redefine experiences and empower business growth.
                 </p>
