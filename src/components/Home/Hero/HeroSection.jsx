@@ -3,7 +3,7 @@ import Button from "../../shared/Button/Button";
 const HeroSection = () => {
   return (
     <>
-      <div className="bg-heroBg font-[sans-serif]  h-[80svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
+      <div className="bg-heroBg font-[sans-serif] h-[80svh] lg:h-[80svh] overflow-hidden pt-10 md:pt-20">
         <div className="flex max-w-[1440px] mx-auto">
           <div className="mx-auto px-4 xl:w-8/12">
             <div className="relative z-10 lg:text-left font-semibold">

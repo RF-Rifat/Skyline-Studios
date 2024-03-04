@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div className="font-sans">
       <HeroSection />
-      <Experience />
-      {/* <Test /> */}
+      {/* <Experience /> */}
+      <Test />
       {/* <CardContainer /> */}
       <Projects />
       <Feedback />
