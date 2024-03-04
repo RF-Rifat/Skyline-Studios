@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/shared/Navbar";
+// import Navbar from "../components/shared/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -9,7 +9,7 @@ const Root = () => {
   }, []);
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Outlet />
     </>

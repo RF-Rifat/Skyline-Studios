@@ -1,23 +1,25 @@
-import Contact from "../components/Home/Contact/Contact";
-import Test from "../components/Home/Experience/Test";
-import Feedback from "../components/Home/Feedback/Feedback";
-import HeroSection from "../components/Home/Hero/HeroSection";
-import LatestProject from "../components/Home/LatestProject/LatestProject";
-import Projects from "../components/Home/Projects/Projects";
-import Services from "../components/Home/Services/Services";
+// import Contact from "../components/Home/Contact/Contact";
+// import Test from "../components/Home/Experience/Test";
+// import Feedback from "../components/Home/Feedback/Feedback";
+// import HeroSection from "../components/Home/Hero/HeroSection";
+// import LatestProject from "../components/Home/LatestProject/LatestProject";
+// import Projects from "../components/Home/Projects/Projects";
+// import Services from "../components/Home/Services/Services";
+import TestSection from "../components/Home/TestSection";
 
 const Home = () => {
   return (
-    <div className="font-sans">
-      <HeroSection />
-      {/* <Experience /> */}
+    <div>
+      <TestSection />
+      {/* <Experience />
+      <CardContainer /> */}
+      {/* <HeroSection />
       <Test />
-      {/* <CardContainer /> */}
       <Projects />
       <Feedback />
       <Services />
       <LatestProject />
-      <Contact />
+      <Contact /> */}
     </div>
   );
 };
