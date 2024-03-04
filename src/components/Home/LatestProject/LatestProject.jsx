@@ -6,7 +6,7 @@ const LatestProject = () => {
           <h2 className="text-6xl text-center font-semibold text-[#333] mt-20 mb-16">
             Latest Design trends
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 mt-12 lg:px-24">
+          <div className="grid grid-cols-2 xl:grid-cols-3 gap-8 mt-12 lg:px-6 xl:px-24">
             <div className=" cursor-pointer rounded overflow-hidden group">
               <div className="relative overflow-hidden">
                 <img

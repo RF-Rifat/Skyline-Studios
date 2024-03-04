@@ -7,7 +7,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-heroBg p-1 md:p-10 relative overflow-hidden">
+    <div className="bg-heroBg p-1 xl:px-10 relative overflow-hidden pt-10">
       <div className="max-w-[1440px] mx-auto">
         <div
           className="grid lg:grid-cols-2"
@@ -21,11 +21,11 @@ const Contact = () => {
           // }}
         >
           <div className="relative">
-            <h2 className="text-white mb-10 lg:mb-52 text-left text-4xl lg:text-7xl mx-6 lg:mx-20 font-semibold">
+            <h2 className="text-white mb-10 lg:mb-52 text-left text-4xl lg:text-7xl md:mx-6 lg:mx-14 xl:mx-20 3xl:mx-24 font-semibold">
               Have a Project Idea?
             </h2>
           </div>
-          <div className="px-6">
+          <div className="px-6 xl:pr-20">
             <form onSubmit={handleSubmit} className="space-y-10">
               <div className="text-4xl">
                 <Input
