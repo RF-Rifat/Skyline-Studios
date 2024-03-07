@@ -10,7 +10,6 @@ const Root = () => {
   return (
     <>
       <Navbar />
-
       <Outlet />
     </>
   );
