@@ -26,14 +26,12 @@ const AboutBanner = () => {
           <span className="text-gray-600"> — Inspiring Designs..</span>
         </motion.div>
       </motion.div>
-      <div className="breadcrumb-thumbnaiil-wrap z-index">
+      <div className="z-10">
         <img
           src="https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team.webp"
           alt="About Us"
-          // srcSet="https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team-p-500.webp 500w, https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team-p-800.webp 800w, https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team-p-1080.webp 1080w, https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team-p-1600.webp 1600w, https://assets-global.website-files.com/643f7373d3f6653157617339/6576c7a25f51682c8ffa29e1_musemind-team.webp 1920w"
           className="w-full h-80 lg:h-full"
         />
-        <div data-aos="fade-down" />
       </div>
     </>
   );
