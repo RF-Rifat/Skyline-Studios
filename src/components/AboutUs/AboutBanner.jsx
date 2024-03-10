@@ -20,7 +20,7 @@ const AboutBanner = () => {
             transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
           }}
           transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          className="tracking-tight leading-snug font-bold text-6xl lg:text-7xl xl:text-8xl pt-32 pb-20 px-4"
+          className="font-bold text-6xl lg:text-7xl xl:text-8xl pt-32 pb-20 px-4"
         >
           Fueling Minds <br />
           <span className="text-gray-600"> — Inspiring Designs..</span>

@@ -14,8 +14,8 @@ const Description = () => {
           transition: "all 1s",
         }}
       >
-        <div className="max-w-4xl mx-auto">
-          <h2 className="tracking-tight leading-snug font-bold text-6xl lg:text-7xl xl:text-8xl">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="tracking-tight  font-bold text-5xl lg:text-6xl xl:text-7xl">
             Musemind Design Agency{" "}
             <span className="section-title-extra-color">
               Igniting Excellence Through Dedication &amp; Innovation
