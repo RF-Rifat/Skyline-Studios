@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Button from "../shared/Button/Button";
 const Description = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -14,14 +15,20 @@ const Description = () => {
           transition: "all 1s",
         }}
       >
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="tracking-tight  font-bold text-5xl lg:text-6xl xl:text-7xl">
-            Musemind Design Agency{" "}
-            <span className="section-title-extra-color">
+        <div
+          className="max-w-5xl mx-auto px-4 space-y-6 pt-[7cqw]"
+          style={{
+            transform: isInView ? "" : "translateY(50px)",
+            transition: "all 1s",
+          }}
+        >
+          <h2 className="tracking-tight font-bold text-5xl lg:text-6xl xl:text-[4.25rem] leading-snug">
+            Musemind Design Agency
+            <span className="text-gray-500 ml-3">
               Igniting Excellence Through Dedication &amp; Innovation
             </span>
           </h2>
-          <div className="section-cotent-wrap">
+          <div className="text-xl xl:text-2xl text-gray-500 leading-relaxed space-y-6">
             <p>
               At Musemind, our journey is fired by passion—our core spark. The
               secret to our innovation and success? It&apos;s the fusion of
@@ -35,6 +42,14 @@ const Description = () => {
               and reliable results. This foundation of trust has been key to our
               journey, fostering relationships and fueling our enduring success.
             </p>
+          </div>
+          <div className="mt-4 xl:mt-12 flex justify-start ">
+            <Button
+              text={"Discover our works"}
+              color={"bg-[#FFFF00]"}
+              fontClr={"text-[#000000]"}
+              pad={"p-3"}
+            />
           </div>
         </div>
       </motion.div>
