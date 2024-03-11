@@ -2,7 +2,7 @@ import { HiOutlineUserGroup } from "react-icons/hi";
 const WhyUs = () => {
   return (
     <>
-      <div className="max-w-[1440px] mx-auto relative">
+      <div className="max-w-[1440px] mx-auto relative pb-20 xl:px-10">
         <img
           src="https://assets-global.website-files.com/643f7373d3f6653157617339/644a1c92b49983ca116cd5f2_Rectangle%2017714.webp"
           loading="lazy"
@@ -106,9 +106,10 @@ const WhyUs = () => {
                 />
               </g>
             </svg>
-            <h3 className="text-2xl font-semibold mb-2">Performance</h3>
+            <h3 className="text-2xl font-semibold mb-2">Transparent Process</h3>
             <p className="text-gray-500 text-base">
-              Experience blazing-fast performance with our product.
+              Our open communication ensures you&apos;re informed every step,
+              fostering trust and confidence in the design journey.
             </p>
           </div>
           <div className="p-4">
@@ -147,10 +148,12 @@ const WhyUs = () => {
                 data-original="#000000"
               />
             </svg>
-            <h3 className="text-2xl font-semibold mb-2">Global Reach</h3>
+            <h3 className="text-2xl font-semibold mb-2">
+              Data-Driven Decisions
+            </h3>
             <p className="text-gray-500 text-base">
-              Tailor our product to suit your needs Expand your reach with our
-              global network.
+              Our approach combines creativity with insights, using user data to
+              refine designs that are not only appealing but also effective.
             </p>
           </div>
           <div className="p-4">
