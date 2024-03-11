@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Button from "../shared/Button/Button";
+import Ticker from "./Ticker";
 const Description = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -52,6 +53,7 @@ const Description = () => {
             />
           </div>
         </div>
+        <Ticker />
       </motion.div>
     </>
   );
