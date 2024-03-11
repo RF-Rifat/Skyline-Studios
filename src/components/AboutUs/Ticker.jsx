@@ -268,7 +268,7 @@ const ImgTicker = () => {
   return (
     <>
       <div className="flex py-20">
-        <div className="flex justify-center">
+        <div className="flex justify-center overflow-x-hidden">
           <Ticker duration={30}>
             {images?.map((image, index) => (
               <div
